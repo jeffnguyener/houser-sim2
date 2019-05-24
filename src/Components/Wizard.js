@@ -1,10 +1,21 @@
 import React, { Component } from 'react'
 
 class Wizard extends Component {
+    constructor(){
+        super()
+        this.state = {
+
+        }
+    }
+    resetForm = () => {
+        this.setState()
+      }
+
     render() {
         return (
             <div>
-                <button>Cancel</button>
+                <button onClick={this.resetForm}
+                        type="button">Cancel</button>
             <div className="propertyname">
                 <h3>Property Name</h3>
             <input type="text"

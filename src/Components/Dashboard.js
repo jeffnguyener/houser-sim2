@@ -6,7 +6,8 @@ class Dashboard extends Component {
     constructor(){
         super()
         this.state = {
-            houses: []
+            houses: [],
+            redirect: false
         }
     }
     componentDidMount(){
@@ -19,8 +20,14 @@ class Dashboard extends Component {
             this.setState({ houses: results.data})
         })
     }
-    handleAddProperty(){
-        
+    setRedirect = () => {
+        this.setState({
+          redirect: true
+        })
+    }
+    handleRedirect = () =>{
+        if(this.state.houses)
+        return <redirect to='/wizard'/>
     }
 
     render() {
@@ -28,7 +35,8 @@ class Dashboard extends Component {
             <div>
                 Dashboard
                 <div className="add-prop">
-                <button onClick={}>Add New Property</button>
+                {this.handleRedirect()}
+                <button onClick={this.setRedirect}>Add New Property</button>
                 </div>
             <House />
             </div>
