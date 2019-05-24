@@ -19,13 +19,16 @@ class Dashboard extends Component {
             this.setState({ houses: results.data})
         })
     }
+    handleAddProperty(){
+        
+    }
 
     render() {
         return (
             <div>
                 Dashboard
-                <div className="addprop">
-                <button>Add Property</button>
+                <div className="add-prop">
+                <button onClick={}>Add New Property</button>
                 </div>
             <House />
             </div>
