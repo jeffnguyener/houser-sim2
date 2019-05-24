@@ -14,7 +14,7 @@ module.exports = {
         const database = req.app.get('db')
         const { propertyName, address, city, state, zip } = req.body
 
-        database.add_property([propertyName, address, city, state, zip]).then(houses =>
+        database.add_property({propertyName, address, city, state, zip}).then(houses =>
             res.status(200).then(houses))
     },
     deleteProperty: (req, res) => {

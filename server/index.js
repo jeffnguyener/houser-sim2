@@ -18,7 +18,7 @@ app.use(
     })
 )
 
-app.get('/api/getproperty/:id', controller.getProperties)
+app.get('/api/getproperties', controller.getProperties)
 app.post('/api/add', controller.addProperty)
 app.delete('/api/houses/:id', controller.deleteProperty)
 
